@@ -103,10 +103,14 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     align-items: start;
+    margin: 0;
+    padding: 0;
 }
 
 .portfolio-column,
 .resume-column {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
 }
@@ -118,7 +122,8 @@ body {
 .resume-column {
     grid-column: 2;
     position: sticky;
-    top: 2rem;
+    top: 1.5rem;
+    height: fit-content;
 }
 
 /* Section styles reset */
@@ -281,9 +286,9 @@ body {
 .content-area {
     flex: 1;
     margin-left: var(--sidebar-width);
-    padding: 2rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
     max-width: calc(100% - var(--sidebar-width));
+    display: block;
 }
 
 /* Sections */
@@ -295,14 +300,30 @@ body {
     margin: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     z-index: 1;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Override any AOS animation margins */
+[data-aos] {
+    margin: 0 !important;
+    transform: none !important;
+}
+
+/* Reset all possible spacing that could affect alignment */
+.section > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .section h2 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
+    margin-top: 0;
     color: var(--text-color);
     position: relative;
     padding-bottom: 0.75rem;
+    padding-top: 0;
 }
 
 .section h2::after {
