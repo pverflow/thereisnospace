@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lightbox2 for image galleries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- AOS for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" data-aos="fade-right">
+            <div class="sidebar-header">
+                <div class="profile-section">
+                    <h1>Hakan Bilenler</h1>
+                    <p class="title">Senior Technical Artist</p>
+                </div>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#resume" class="active"><i class="fas fa-file-alt"></i>Resume</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-images"></i>Portfolio</a></li>
+                    <!-- <li><a href="#testimonials"><i class="fas fa-comments"></i>Testimonials</a></li> -->
+                    <!-- <li><a href="#contacts"><i class="fas fa-envelope"></i>Contacts</a></li> -->
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="two-column-layout">
+                <!-- Portfolio Section -->
+                <section id="portfolio" class="section portfolio-column" data-aos="fade-up">
+                    <h2>Portfolio</h2>
+                    <div class="portfolio-filters">
+                        <button class="filter active" data-filter="all">All</button>
+                        <button class="filter" data-filter="game">Games</button>
+                        <button class="filter" data-filter="tech">Technical Art</button>
+                        <button class="filter" data-filter="tools">Tools</button>
+                    </div>
+
+                    <!-- Project Grid -->
+                    <div class="portfolio-grid">
+                        <!-- Bulletstorm -->
+                        <div class="portfolio-card game" data-aos="fade-up" data-project="bulletstorm">
+                            <div class="card-preview">
+                                <img src="images/bulletstorm-cover-1920x1080.jpg" alt="Bulletstorm">
+                                <div class="card-overlay">
+                                    <h3>Bulletstorm</h3>
+                                    <p>Technical Artist</p>
+                                    <button class="expand-button">View Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resume Section -->
+                <section id="resume" class="section resume-column" data-aos="fade-up">
+                    <h2>Resume</h2>
+                    <div class="resume-grid">
+                        <div class="resume-section" data-aos="fade-up">
+                            <h3>Experience</h3>
+                            <div class="timeline">
+                                <!-- Recent Experience (Always Visible) -->
+                                <div class="timeline-recent">
+                                    <div class="timeline-item">
+                                        <div class="year">05/2024 - Present</div>
+                                        <div class="details">
+                                            <h4>Senior Technical Artist</h4>
+                                            <p class="company">Capgemini, Berlin</p>
+                                            <p class="description">Client work under NDA</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">11/2021 - 04/2024</div>
+                                        <div class="details">
+                                            <h4>Senior Technical Artist</h4>
+                                            <p class="company">Unity3D, Berlin</p>
+                                            <p class="description">Select client work - Mercedes, Audi, IBM</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">08/2013 - 10/2021</div>
+                                        <div class="details">
+                                            <h4>Multidisciplinary Designer</h4>
+                                            <p class="company">Zenger Agency, Istanbul</p>
+                                            <p class="description">Select client work - Google, Vodaphone, Fanta</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Expand Button -->
+                                <button class="timeline-expand">
+                                    <span class="expand-text">Show More</span>
+                                    <span class="collapse-text">Show Less</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+
+                                <!-- Previous Experience (Expandable) -->
+                                <div class="timeline-previous">
+                                    <div class="timeline-item">
+                                        <div class="year">11/2020 - 10/2021</div>
+                                        <div class="details">
+                                            <h4>Senior Technical Artist</h4>
+                                            <p class="company">Chimera Entertainment, Munich</p>
+                                            <p class="description">Xcom Legends - Senior Technical Artist</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">04/2016 - 10/2020</div>
+                                        <div class="details">
+                                            <h4>Lead Artist</h4>
+                                            <p class="company">Nukklear Digital Minds, Hannover</p>
+                                            <p class="description">Comanche 2020 - 3D Art Director</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">04/2014 - 04/2016</div>
+                                        <div class="details">
+                                            <h4>Lead Artist</h4>
+                                            <p class="company">Skilltree Studios, Berlin</p>
+                                            <p class="description">Crookz: The Big Heist - Art Director</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">09/2011 - 03/2014</div>
+                                        <div class="details">
+                                            <h4>Lead Artist</h4>
+                                            <p class="company">Noumena Studios, Berlin</p>
+                                            <p class="description">The Dark Eye Demonicon - Interim Art Director / VFX Artist</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="year">10/2008 - 07/2011</div>
+                                        <div class="details">
+                                            <h4>Digital Artist</h4>
+                                            <p class="company">Metricminds, Frankfurt</p>
+                                            <p class="description">
+                                                Alan Wake - Lead technical animator<br>
+                                                Bulletstorm - Lead technical animator<br>
+                                                Call of Juarez / Dead Island - Cutscene artist
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+                <h2>Portfolio</h2>
+                <div class="portfolio-filters">
+                    <button class="filter active" data-filter="all">All</button>
+                    <button class="filter" data-filter="game">Games</button>
+                    <button class="filter" data-filter="tech">Technical Art</button>
+                    <button class="filter" data-filter="tools">Tools</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="portfolio-grid">
+                    <!-- Bulletstorm -->
+                    <div class="portfolio-card game" data-aos="fade-up" data-project="bulletstorm">
+                        <div class="card-preview">
+                            <img src="images/bulletstorm-cover-1920x1080.jpg" alt="Bulletstorm">
+                            <div class="card-overlay">
+                                <h3>Bulletstorm</h3>
+                                <p>Technical Artist</p>
+                                <button class="expand-button">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more portfolio cards following the same structure -->
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <!--
+            <section id="testimonials" class="section" data-aos="fade-up">
+                <h2>Testimonials</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial" data-aos="fade-up">
+                        <div class="testimonial-content">
+                            <p>"Outstanding work and attention to detail. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/client1.jpg" alt="Client Name">
+                            <div class="author-info">
+                                <h4>Client Name</h4>
+                                <p>CEO, Company Name</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+
+            <!-- Contacts Section -->
+            <!--
+            <section id="contacts" class="section" data-aos="fade-up">
+                <h2>Contacts</h2>
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-up">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>your.email@example.com</p>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+1 234 567 890</p>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>City, Country</p>
+                    </div>
+                </div>
+            </section>
+            -->
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Project Details Container -->
+    <div id="project-details-container" class="hidden">
+        <div class="project-details" id="bulletstorm-details">
+            <div class="project-header">
+                <h2>Bulletstorm</h2>
+                <button class="close-button"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-overview">
+                    <h3>Project Overview</h3>
+                    <p>Technical Art Lead for Bulletstorm, focusing on optimization and workflow improvements.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="images/bulletstorm-cover-1920x1080.jpg" alt="Main Image">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="images/bulletstorm-cover-1920x1080.jpg" alt="Thumbnail 1" class="active">
+                        <!-- Add more thumbnails -->
+                    </div>
+                </div>
+
+                <div class="project-details-grid">
+                    <div class="detail-section">
+                        <h4>Technical Achievements</h4>
+                        <ul>
+                            <li>Implemented advanced shading techniques</li>
+                            <li>Optimized rendering pipeline</li>
+                            <li>Created custom tools for artists</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>Workflow Improvements</h4>
+                        <p>Developed automated asset processing pipeline resulting in 50% faster iteration times.</p>
+                    </div>
+
+                    <div class="detail-section video-section">
+                        <h4>Development Footage</h4>
+                        <div class="video-placeholder">
+                            <!-- Video embed will go here -->
+                            <div class="video-embed">Video Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
