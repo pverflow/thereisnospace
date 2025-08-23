@@ -176,18 +176,20 @@ body {
 /* Logo Container */
 .logo-container {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: transparent;
+    overflow: hidden;
 }
 
 .sidebar-logo {
-    width: 100%;
-    max-width: 200px;
+    width: auto;
+    max-width: 160px;
     height: auto;
+    max-height: 160px;
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
