@@ -87,29 +87,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter functionality
     filters.forEach(filter => {
         filter.addEventListener('click', function() {
+            // Update active state of filter buttons
             filters.forEach(f => f.classList.remove('active'));
             this.classList.add('active');
 
             const category = this.getAttribute('data-filter');
-            const portfolioGrid = document.querySelector('.portfolio-grid');
             
-            // Add filtering class for transition effect
-            portfolioGrid.classList.add('filtering');
-
+            // Apply filtering with animation
             portfolioCards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    // Show card
-                    card.classList.remove('hidden');
-                } else {
-                    // Hide card
-                    card.classList.add('hidden');
-                }
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    if (category === 'all' || card.classList.contains(category)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }, 300);
             });
-
-            // Remove filtering class after transition
-            setTimeout(() => {
-                portfolioGrid.classList.remove('filtering');
-            }, 500);
         });
     });
 
