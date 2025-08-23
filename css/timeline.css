@@ -1,0 +1,66 @@
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin-left: 1rem;
+    overflow: visible;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--accent-resume);
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(127, 215, 215, 0.1);
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(127, 215, 215, 0.2);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-item:last-child::after {
+    height: 50%;
+}
+
+.timeline-item .details {
+    position: relative;
+    z-index: 2;
+}
+
+.year {
+    color: var(--accent-resume);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
