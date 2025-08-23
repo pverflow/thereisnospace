@@ -246,6 +246,9 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
 }
 
 .about-me p:last-child {
