@@ -173,11 +173,27 @@ body {
     flex-direction: column;
 }
 
+/* Logo Container */
+.logo-container {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1rem;
 }
 
 .mobile-menu-close {
@@ -217,10 +233,8 @@ body {
 
 /* About Me Section */
 .about-me {
-    margin-top: 2rem;
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.03);
-    border-radius: 10px;
 }
 
 .about-me h3 {
