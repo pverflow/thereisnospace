@@ -186,8 +186,9 @@ body {
 .decorative-line {
     width: 40px;
     height: 3px;
-    background-color: var(--primary-color);
-    margin-top: 1rem;
+    background-color: var(--accent-testimonials);
+    margin: 1rem 0 0 1rem;
+    align-self: flex-start;
 }
 
 .sidebar-logo {
