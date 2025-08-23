@@ -122,7 +122,6 @@ body {
 .resume-column {
     grid-column: 2;
     position: sticky;
-    top: 1.5rem;
     height: fit-content;
 }
 
