@@ -183,12 +183,28 @@ body {
     padding: 0 1rem;
 }
 
-.decorative-line {
-    width: 40px;
-    height: 3px;
-    background-color: var(--accent-testimonials);
+.decorative-lines {
+    display: flex;
+    gap: 2px;
     margin: 1rem 0 0 1rem;
     align-self: flex-start;
+}
+
+.decorative-lines .line {
+    width: 30px;
+    height: 3px;
+}
+
+.line-pink {
+    background-color: var(--accent-portfolio);
+}
+
+.line-yellow {
+    background-color: var(--accent-testimonials);
+}
+
+.line-blue {
+    background-color: var(--accent-resume);
 }
 
 .sidebar-logo {
