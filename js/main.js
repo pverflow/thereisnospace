@@ -91,14 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.add('active');
 
             const category = this.getAttribute('data-filter');
+            const portfolioGrid = document.querySelector('.portfolio-grid');
+            
+            // Add filtering class for transition effect
+            portfolioGrid.classList.add('filtering');
 
             portfolioCards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'block';
+                    // Show card
+                    card.classList.remove('hidden');
                 } else {
-                    card.style.display = 'none';
+                    // Hide card
+                    card.classList.add('hidden');
                 }
             });
+
+            // Remove filtering class after transition
+            setTimeout(() => {
+                portfolioGrid.classList.remove('filtering');
+            }, 500);
         });
     });
 
