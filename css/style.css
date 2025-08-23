@@ -180,18 +180,18 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    padding: 0 1rem;
+   
 }
 
 .decorative-lines {
     display: flex;
-    gap: 2px;
-    margin: 1rem 0 0 1rem;
+    gap: 0px;
+    margin: 1rem 0 0 0;
     align-self: flex-start;
 }
 
 .decorative-lines .line {
-    width: 30px;
+    width: 84px;
     height: 3px;
 }
 
