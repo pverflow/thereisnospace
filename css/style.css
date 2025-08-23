@@ -215,59 +215,41 @@ body {
     font-weight: 500;
 }
 
-/* Main Navigation */
-.main-nav {
-    margin-top: 0.5rem;
+/* About Me Section */
+.about-me {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
 }
 
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.main-nav a {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
+.about-me h3 {
     color: var(--text-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    margin-bottom: 0.25rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.main-nav a i {
-    margin-right: 0.75rem;
-    width: 20px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: #fff;
-}
-
-/* Colored navigation items */
-.main-nav a[href="#resume"]:hover,
-.main-nav a[href="#resume"].active {
-    background-color: var(--accent-resume);
-}
-
-.main-nav a[href="#portfolio"]:hover,
-.main-nav a[href="#portfolio"].active {
+.about-me h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
     background-color: var(--accent-portfolio);
 }
 
-.main-nav a[href="#testimonials"]:hover,
-.main-nav a[href="#testimonials"].active {
-    background-color: var(--accent-testimonials);
+.about-me p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
-.main-nav a[href="#contacts"]:hover,
-.main-nav a[href="#contacts"].active {
-    background-color: var(--accent-contacts);
+.about-me p:last-child {
+    margin-bottom: 0;
 }
 
 /* Content Area and Sections */
