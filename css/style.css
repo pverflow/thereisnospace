@@ -632,7 +632,7 @@ body {
     opacity: 1;
 }
 
-/* Resume Timeline */
+/* Resume Grid */
 .resume-grid {
     display: grid;
     gap: 2rem;
@@ -655,122 +655,6 @@ body {
     width: 40px;
     height: 3px;
     background-color: var(--accent-resume);
-}
-
-.timeline {
-    position: relative;
-    padding-left: 2.5rem;
-    margin-left: 1rem;
-}
-
-.timeline-previous {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
-    opacity: 0;
-}
-
-.timeline.expanded .timeline-previous {
-    height: auto;
-    opacity: 1;
-}
-
-.timeline-expand {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 1rem;
-    margin: 1rem 0;
-    cursor: pointer;
-    color: var(--accent-resume);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.timeline-expand:hover {
-    color: var(--text-color);
-}
-
-.timeline-expand i {
-    transition: transform 0.3s ease;
-}
-
-.timeline.expanded .timeline-expand i {
-    transform: rotate(180deg);
-}
-
-.timeline-expand .collapse-text {
-    display: none;
-}
-
-.timeline.expanded .timeline-expand .expand-text {
-    display: none;
-}
-
-.timeline.expanded .timeline-expand .collapse-text {
-    display: inline;
-}
-
-.details h4 {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-}
-
-.details .company {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.details .description {
-    color: #777;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 2rem;
-    border-left: 2px solid #e0e0e0;
-    padding-left: 2rem;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -7px;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--accent-resume);
-    border: 2px solid #fff;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 0 2px rgba(127, 215, 215, 0.1);
-}
-
-.timeline-item:hover::before {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 4px rgba(127, 215, 215, 0.2);
-}
-
-.year {
-    color: var(--accent-resume);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
 }
 
 /* Contact Form */
