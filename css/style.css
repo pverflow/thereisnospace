@@ -183,24 +183,11 @@ body {
     padding: 0 1rem;
 }
 
-.logo-container h2 {
-    font-size: 1.5rem;
-    margin: 1rem 0 0;
-    color: var(--text-color);
-    position: relative;
-    padding: 0 0 0.75rem;
-    z-index: 1;
-}
-
-.logo-container h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.decorative-line {
     width: 40px;
     height: 3px;
     background-color: var(--primary-color);
+    margin-top: 1rem;
 }
 
 .sidebar-logo {
