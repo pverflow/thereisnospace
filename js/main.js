@@ -239,3 +239,176 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Gallery image switching function
+function changeMainImage(thumbnail, mainImageId) {
+    const mainImage = document.getElementById(mainImageId);
+    const thumbnails = thumbnail.parentElement.querySelectorAll('img');
+    
+    // Update main image source
+    mainImage.src = thumbnail.src;
+    mainImage.alt = thumbnail.alt;
+    
+    // Update active thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+// Enhanced gallery functions for images and videos
+function showImage(thumbnail, galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = thumbnail.parentElement.querySelectorAll('img, .video-thumb');
+    
+    // Create or update image
+    galleryMain.innerHTML = `<img src="${thumbnail.src}" alt="${thumbnail.alt}" id="${galleryMainId}-image">`;
+    
+    // Update active thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+function showVideo(galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = galleryMain.parentElement.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+    
+    // Create video container
+    galleryMain.innerHTML = `
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Z2CX5q52qLk" 
+                    title="Alan Wake Development Footage" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    `;
+    
+    // Update active thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    galleryMain.parentElement.querySelector('.video-thumb').classList.add('active');
+}
+
+function showBulletstormVideo(galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = galleryMain.parentElement.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+    
+    // Create video container
+    galleryMain.innerHTML = `
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zlOyCLIEio4" 
+                    title="Bulletstorm Development Footage" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    `;
+    
+    // Update active thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    galleryMain.parentElement.querySelector('.video-thumb').classList.add('active');
+}
+
+function showCrookzArtStyleVideo(galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = galleryMain.parentElement.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+    
+    // Create video container
+    galleryMain.innerHTML = `
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Kk9nC8QXtew" 
+                    title="Crookz Art Style Discussion" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    `;
+    
+    // Update active thumbnail - find the first video thumb
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    const videoThumbs = galleryMain.parentElement.querySelectorAll('.video-thumb');
+    if (videoThumbs.length > 0) {
+        videoThumbs[0].classList.add('active');
+    }
+}
+
+function showCrookzGameplayVideo(galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = galleryMain.parentElement.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+    
+    // Create video container
+    galleryMain.innerHTML = `
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Ii9Lq6V6" 
+                    title="Crookz Let's Play Gameplay" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    `;
+    
+    // Update active thumbnail - find the second video thumb
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    const videoThumbs = galleryMain.parentElement.querySelectorAll('.video-thumb');
+    if (videoThumbs.length > 1) {
+        videoThumbs[1].classList.add('active');
+    }
+}
+
+function showComancheTrailerVideo(galleryMainId) {
+    const galleryMain = document.getElementById(galleryMainId);
+    const thumbnails = galleryMain.parentElement.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+    
+    // Create video container
+    galleryMain.innerHTML = `
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/5YP_7qvGSS8" 
+                    title="Comanche Release Trailer" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    `;
+    
+    // Update active thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    galleryMain.parentElement.querySelector('.video-thumb').classList.add('active');
+}
+
+// Function to color detail section headers based on their text content
+function colorDetailHeaders() {
+    const headers = document.querySelectorAll('.detail-section h4');
+    
+    headers.forEach(header => {
+        const text = header.textContent.trim();
+        
+        // Turquoise for Pipeline Development, Technical Implementation, and Hands-On Development
+        if (text.includes('Pipeline Development') || text.includes('Technical Implementation') || text.includes('Pipeline Innovation') || text.includes('Hands-On Development')) {
+            header.classList.add('turquoise-header');
+        }
+        // Yellow for Technical Innovation, Project Deliverables, and Project Impact
+        else if (text.includes('Technical Innovation') || text.includes('Project Deliverables') || text.includes('Project Impact')) {
+            header.classList.add('yellow-header');
+        }
+        // Pink for Team Leadership, Creative Responsibilities, and Art Direction (default, but explicit)
+        else if (text.includes('Team Leadership') || text.includes('Creative Responsibilities') || text.includes('Art Direction') || text.includes('Team Leadership & Production')) {
+            header.classList.add('pink-header');
+        }
+    });
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    colorDetailHeaders();
+});
+
+// Also call it when project details are opened (in case content is dynamically loaded)
+document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-project]')) {
+        // Small delay to ensure content is loaded
+        setTimeout(colorDetailHeaders, 100);
+    }
+});
