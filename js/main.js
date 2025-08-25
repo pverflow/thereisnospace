@@ -137,7 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden';
         }
 
-        expandButton.addEventListener('click', openProject);
+        if (expandButton) {
+            expandButton.addEventListener('click', openProject);
+        }
         cardPreview.addEventListener('click', openProject);
     });
 

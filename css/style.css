@@ -607,14 +607,6 @@ body {
     opacity: 0.9;
 }
 
-.card-overlay .overview {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    max-width: 90%;
-    opacity: 0.95;
-}
-
 /* Project Details Content */
 .project-details-grid {
     display: grid;
@@ -693,22 +685,6 @@ body {
 }
 
 /* Buttons */
-.expand-button {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.expand-button:hover {
-    background: #fff;
-    color: var(--accent-portfolio);
-}
-
 .close-button {
     background: none;
     border: none;
@@ -761,8 +737,8 @@ body {
 /* Resume Timeline */
 .resume-grid {
     display: grid;
-    gap: 2rem;
-    max-width: 800px;
+    gap: 0rem;
+    max-width: 700px;
 }
 
 .resume-section h3 {

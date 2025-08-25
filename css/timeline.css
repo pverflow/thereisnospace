@@ -1,14 +1,14 @@
 /* Timeline Styles */
 .timeline {
     position: relative;
-    padding-left: 3rem;
-    margin-left: 1rem;
+    padding-left: 0rem;
+    margin-left: 0rem;
     overflow: visible;
 }
 
 .timeline-item {
     position: relative;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     padding-left: 2rem;
     margin-left: 1rem;
 }
