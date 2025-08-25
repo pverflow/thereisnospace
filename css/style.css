@@ -938,12 +938,11 @@ body {
 
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
     align-items: center;
     justify-items: center;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .client-logo {
@@ -956,7 +955,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     height: 140px;
 }
 
@@ -967,7 +966,7 @@ body {
 
 .client-logo img {
     max-width: 100%;
-    max-height: 90px;
+    max-height: 110px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1095,9 +1094,8 @@ body {
     }
 
     .clients-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
     }
 
     .client-logo {
@@ -1107,7 +1105,7 @@ body {
     }
 
     .client-logo img {
-        max-height: 70px;
+        max-height: 80px;
     }
 
     .contact-info {
