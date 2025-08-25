@@ -95,6 +95,7 @@ body {
     gap: 1.5rem;
     align-items: start;
     min-height: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -108,6 +109,7 @@ body {
     grid-column: 2;
     position: relative;
     height: auto;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     padding: 0;
