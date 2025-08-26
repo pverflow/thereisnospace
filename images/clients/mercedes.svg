@@ -5,10 +5,10 @@
   <!-- Tapered triangular rays -->
   <g fill="#000000">
     <!-- Top triangle (pointing up) -->
-    <path d="M 55 5 L 49 55 L 61 55 Z"/>
+    <path d="M 55 5 L 47 55 L 63 55 Z"/>
     <!-- Bottom left triangle -->
-    <path d="M 16.7 82.5 L 49 49 L 61 61 Z"/>
+    <path d="M 16.7 82.5 L 47 47 L 63 63 Z"/>
     <!-- Bottom right triangle -->
-    <path d="M 93.3 82.5 L 49 61 L 61 49 Z"/>
+    <path d="M 93.3 82.5 L 47 63 L 63 47 Z"/>
   </g>
 </svg>
