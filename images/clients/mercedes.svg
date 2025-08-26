@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
-  <!-- Mercedes three-pointed star with tapered lines -->
+  <!-- Mercedes three-pointed star with tapered triangles -->
   <circle cx="55" cy="55" r="50" fill="none" stroke="#000000" stroke-width="5"/>
-  <!-- Tapered star lines -->
-  <g>
-    <!-- Top line -->
-    <path d="M 55 5 L 55 55" stroke="#000000" stroke-width="8" stroke-linecap="round" opacity="1"/>
-    <path d="M 55 35 L 55 55" stroke="#000000" stroke-width="4" stroke-linecap="round" opacity="1"/>
-    <!-- Bottom left line -->
-    <path d="M 16.7 82.5 L 55 55" stroke="#000000" stroke-width="8" stroke-linecap="round" opacity="1"/>
-    <path d="M 35 68.75 L 55 55" stroke="#000000" stroke-width="4" stroke-linecap="round" opacity="1"/>
-    <!-- Bottom right line -->
-    <path d="M 93.3 82.5 L 55 55" stroke="#000000" stroke-width="8" stroke-linecap="round" opacity="1"/>
-    <path d="M 75 68.75 L 55 55" stroke="#000000" stroke-width="4" stroke-linecap="round" opacity="1"/>
+  <!-- Tapered triangular rays -->
+  <g fill="#000000">
+    <!-- Top triangle (pointing up) -->
+    <path d="M 55 5 L 52 55 L 58 55 Z"/>
+    <!-- Bottom left triangle -->
+    <path d="M 16.7 82.5 L 52 52 L 58 58 Z"/>
+    <!-- Bottom right triangle -->
+    <path d="M 93.3 82.5 L 52 58 L 58 52 Z"/>
   </g>
 </svg>
