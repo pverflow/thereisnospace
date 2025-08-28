@@ -81,37 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', setActiveLink);
 
     // Portfolio Functionality
-    const filters = document.querySelectorAll('.filter');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
-    
-    // Filter functionality
-    filters.forEach(filter => {
-        filter.addEventListener('click', function() {
-            // Update active state of filter buttons
-            filters.forEach(f => f.classList.remove('active'));
-            this.classList.add('active');
-
-            const category = this.getAttribute('data-filter');
-            
-            // Apply filtering with animation
-            portfolioCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.95)';
-                
-                setTimeout(() => {
-                    if (category === 'all' || card.classList.contains(category)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }, 300);
-            });
-        });
-    });
 
     // Project expansion functionality
     const projectDetailsContainer = document.getElementById('project-details-container');
@@ -164,17 +134,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gallery functionality
     document.querySelectorAll('.project-details').forEach(details => {
-        const galleryThumbs = details.querySelectorAll('.gallery-thumbs img');
-        const mainImage = details.querySelector('.gallery-main img');
+        const galleryThumbs = details.querySelectorAll('.gallery-thumbs img, .gallery-thumbs .video-thumb');
+        const galleryMain = details.querySelector('.gallery-main');
 
         galleryThumbs.forEach(thumb => {
             thumb.addEventListener('click', () => {
-                // Update main image
-                mainImage.src = thumb.src;
-                
-                // Update active thumbnail
+                // Remove active class from all thumbnails
                 galleryThumbs.forEach(t => t.classList.remove('active'));
                 thumb.classList.add('active');
+
+                if (thumb.classList.contains('video-thumb')) {
+                    // Handle video thumbnail click
+                    const videoSrc = thumb.getAttribute('data-video');
+                    galleryMain.innerHTML = `
+                        <div class="video-container active">
+                            <iframe src="${videoSrc}" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    `;
+                } else {
+                    // Handle image thumbnail click
+                    galleryMain.innerHTML = `<img src="${thumb.src}" alt="${thumb.alt}">`;
+                }
             });
         });
     });
