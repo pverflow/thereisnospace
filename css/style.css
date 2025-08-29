@@ -109,7 +109,7 @@ body {
     grid-column: 2;
     position: relative;
     height: auto;
-    max-width: 500px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -458,21 +458,41 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    background: rgba(0, 0, 0, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     padding: 1rem 2rem;
     z-index: 2001;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+.project-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-portfolio);
+}
+
+/* Client project headers use yellow accent */
+#google-details .project-header::after,
+#audi-details .project-header::after,
+#mercedes-details .project-header::after,
+#vodafone-details .project-header::after,
+#vitreality-details .project-header::after {
+    background-color: var(--accent-testimonials);
 }
 
 .project-content {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 2001;
+    z-index: 1;
     padding: 2rem 2rem 4rem 2rem;
 }
 
@@ -807,13 +827,13 @@ body {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--accent-testimonials);
+    color: var(--text-color);
     padding: 0.5rem;
     transition: color 0.3s ease;
 }
 
 .close-button:hover {
-    color: var(--accent-testimonials);
+    color: var(--accent-portfolio);
     opacity: 0.8;
 }
 
@@ -1051,14 +1071,6 @@ body {
     background-color: var(--accent-testimonials);
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    margin-top: 4rem;
-}
-
 /* Project Details Container Overrides */
 /* Project Details Container */
 #project-details-container {
@@ -1078,7 +1090,7 @@ body {
 }
 
 .project-header h2 {
-    color: var(--accent-testimonials);
+    color: var(--text-color);
     margin: 0;
     font-size: 1.8rem;
 }

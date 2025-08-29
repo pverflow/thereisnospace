@@ -151,7 +151,7 @@
                             <!-- Google -->
                             <div class="portfolio-card client" data-aos="fade-up" data-project="google">
                                 <div class="card-preview">
-                                    <img src="images/clients/google_thumbnail.jpg" alt="Google">
+                                    <img src="images/Google/google_thumbnail.jpg" alt="Google">
                                     <div class="card-overlay">
                                         <h3>Google</h3>
                                         <p class="role">Internot Roadshow</p>
@@ -162,7 +162,7 @@
                             <!-- Audi -->
                             <div class="portfolio-card client" data-aos="fade-up" data-project="audi">
                                 <div class="card-preview">
-                                    <img src="images/clients/audi_thumbnail.jpg" alt="Audi">
+                                    <img src="images/Audi/audi_thumbnail.jpg" alt="Audi">
                                     <div class="card-overlay">
                                         <h3>Audi</h3>
                                         <p class="role">Client Work</p>
@@ -173,7 +173,7 @@
                             <!-- Mercedes -->
                             <div class="portfolio-card client" data-aos="fade-up" data-project="mercedes">
                                 <div class="card-preview">
-                                    <img src="images/clients/mercedes_thumbnail.jpg" alt="Mercedes-Benz">
+                                    <img src="images/Mercedes/mercedes_thumbnail.jpg" alt="Mercedes-Benz">
                                     <div class="card-overlay">
                                         <h3>Mercedes-Benz</h3>
                                         <p class="role">Client Work</p>
@@ -184,10 +184,10 @@
                             <!-- Vodafone -->
                             <div class="portfolio-card client" data-aos="fade-up" data-project="vodafone">
                                 <div class="card-preview">
-                                    <img src="images/clients/vodafone_thumbnail.jpg" alt="Vodafone">
+                                    <img src="images/Vodafone/vodafone_thumbnail.jpg" alt="Vodafone">
                                     <div class="card-overlay">
                                         <h3>Vodafone</h3>
-                                        <p class="role">5G Experience</p>
+                                        <p class="role">Dare to Dream Performance</p>
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                             <!-- Vitra VitReality -->
                             <div class="portfolio-card client" data-aos="fade-up" data-project="vitreality">
                                 <div class="card-preview">
-                                    <img src="images/clients/vitra_thumbnail.jpg" alt="Vitra VitReality">
+                                    <img src="images/Vitreality/vitra_thumbnail.jpg" alt="Vitra VitReality">
                                     <div class="card-overlay">
                                         <h3>Vitra</h3>
                                         <p class="role">VitReality VR Experience</p>
@@ -333,11 +333,6 @@
             -->
         </main>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
@@ -932,68 +927,89 @@
         </div>        <!-- Vodafone Details -->
         <div class="project-details" id="vodafone-details">
             <div class="project-header">
-                <h2>Vodafone 5G Experience</h2>
+                <h2>Vodafone "Dare to Dream"</h2>
                 <button class="close-button"><i class="fas fa-times"></i></button>
             </div>
             
             <div class="project-content">
                 <div class="project-overview">
                     <h3>Project Overview</h3>
-                    <p>Vodafone asked us to build an experience that would show the power of the Vodafone 5G network. We created an interactive door using real time rendering and face tracking to demonstrate their 5G implementations for retail, construction and manufacturing industries.</p>
-                    <p>Guests picked one of the industries and when our door opened, a real presenter from the selected industry of the future started a real time conversation, explaining how operations in each industry will be improved with 5G connectivity. This "door into the future" concept effectively showcased what trends will become the new norm across different sectors.</p>
-                    <p>The Experience works with a Camera that tracks the head position of the person in front of it. A custom camera rig within Unity translates the tracked head data into correct perspective rendering. Meanwhile a presenter is filmed on a green-screen set and the video is projected into Unity as a texture in realtime.</p>
+                    <p>"Dare To Dream" performance took place at Vodafone Turkey Digital Transformation Summit, created with our creative coding and technical management, Şebnem Ferah's storytelling, Ouchhh and Mercan Dede's art direction. The performance featured real-time face projection mapping using live face tracking performed on stage.</p>
+                    <p>This groundbreaking live performance combined cutting-edge motion capture technology, real-time face tracking, and 3D dress tracking to create an immersive digital experience. The project has been recognized with awards at Crystal Apple (Kristal Elma), Felis, and Ace of Mice ceremonies.</p>
+                    <p>The technical challenge involved real-time tracking of both facial features and a 3D printed dress on stage, with live video feed processing and projection mapping - all synchronized for a flawless live performance.</p>
                 </div>
 
                 <div class="project-gallery">
-                    <div class="gallery-main">
-                        <img src="images/clients/vodafone.svg" alt="Vodafone 5G Experience">
+                    <div class="gallery-main" id="vodafone-gallery-main">
+                        <img src="images/Vodafone/DTD-1280x720.jpg" alt="Vodafone Dare to Dream Performance">
                     </div>
                     <div class="gallery-thumbs">
-                        <img src="images/clients/vodafone.svg" alt="Vodafone 5G Experience" class="active">
+                        <img src="images/Vodafone/DTD-1280x720.jpg" alt="Dare to Dream Performance" class="active" onclick="showImage(this, 'vodafone-gallery-main')">
+                        <div class="video-thumb" data-video="https://www.youtube.com/embed/JDzrlm5fILM?start=100">
+                            <img src="https://img.youtube.com/vi/JDzrlm5fILM/maxresdefault.jpg" alt="Dare to Dream Performance Video">
+                            <i class="fas fa-play"></i>
+                            <div class="video-label">Performance</div>
+                        </div>
+                        <div class="video-thumb" data-video="https://www.youtube.com/embed/oGMumCfHoo8">
+                            <img src="https://img.youtube.com/vi/oGMumCfHoo8/maxresdefault.jpg" alt="Face Tracking Close-up">
+                            <i class="fas fa-play"></i>
+                            <div class="video-label">Face Tracking</div>
+                        </div>
+                        <div class="video-thumb" data-video="https://www.youtube.com/embed/HC4KFDFbVGQ">
+                            <img src="https://img.youtube.com/vi/HC4KFDFbVGQ/maxresdefault.jpg" alt="3D Dress Tracking Case Study">
+                            <i class="fas fa-play"></i>
+                            <div class="video-label">Dress Tracking</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-details-grid">
                     <div class="detail-section">
-                        <h4>My Responsibilities</h4>
-                        <p>I was tasked with building and lighting the four different environments we used for this Experience.</p>
+                        <h4>Technical Implementation</h4>
                         <ul>
-                            <li>Art Direction</li>
-                            <li>Light setup</li>
-                            <li>Interface animations</li>
-                            <li>Building the environments</li>
-                            <li>VFX</li>
+                            <li>Motion Capture system setup and calibration</li>
+                            <li>Real-time tracking of 3D printed dress using Microsoft Azure Kinect</li>
+                            <li>Real-time face tracking on stage with projection mapping</li>
+                            <li>Custom tools and script development for live performance</li>
+                            <li>Real-time video feed ingestion and projection in Unity</li>
+                            <li>Live synchronization of multiple tracking systems</li>
                         </ul>
                     </div>
                     
                     <div class="detail-section">
-                        <h4>Technical Innovation</h4>
+                        <h4>Creative & Technical Collaboration</h4>
                         <ul>
-                            <li>Real-time head tracking and face detection</li>
-                            <li>Interactive door mechanism with industry selection</li>
-                            <li>Custom Unity camera rig development</li>
-                            <li>Live green-screen video integration</li>
-                            <li>Perspective-corrected rendering</li>
-                            <li>Multi-environment lighting for retail, construction, and manufacturing</li>
-                            <li>Real-time presenter interaction system</li>
+                            <li>Working closely with visuals team for maximum impact</li>
+                            <li>Coordination with Ouchhh and Mercan Dede's art direction</li>
+                            <li>Integration with Şebnem Ferah's live storytelling performance</li>
+                            <li>Real-time technical troubleshooting during live show</li>
+                            <li>Performance optimization for zero-latency live tracking</li>
+                            <li>Custom pipeline development for seamless show execution</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="project-description">
                     <div class="detail-section">
-                        <h4>Industry Applications</h4>
-                        <p>The experience demonstrated 5G connectivity improvements across three key sectors:</p>
+                        <h4>Technical Challenges</h4>
+                        <p>The project required solving complex real-time tracking challenges:</p>
                         <ul>
-                            <li><strong>Retail:</strong> Enhanced customer experiences and operational efficiency</li>
-                            <li><strong>Construction:</strong> Real-time collaboration and remote monitoring capabilities</li>
-                            <li><strong>Manufacturing:</strong> IoT integration and automated production systems</li>
+                            <li><strong>Live Performance Reliability:</strong> Zero-failure tolerance for live stage performance</li>
+                            <li><strong>Multi-System Synchronization:</strong> Face tracking, dress tracking, and projection mapping in perfect sync</li>
+                            <li><strong>Real-time Processing:</strong> Instant video feed processing with minimal latency</li>
+                            <li><strong>Stage Lighting Integration:</strong> Tracking systems working under dynamic stage lighting</li>
                         </ul>
                     </div>
                     
                     <div class="detail-section">
-                        <h4>Project Impact</h4>
-                        <p>Created an immersive 5G demonstration experience that effectively showcased future technology trends through innovative real-time rendering, interactive design, and live presenter conversations, providing guests with tangible examples of how 5G will transform their industries.</p>
+                        <h4>Awards & Recognition</h4>
+                        <p>The "Dare to Dream" performance has been recognized with prestigious awards:</p>
+                        <ul>
+                            <li><strong>Crystal Apple (Kristal Elma):</strong> Turkey's most prestigious advertising awards</li>
+                            <li><strong>Felis Awards:</strong> Leading creativity and communication awards</li>
+                            <li><strong>Ace of Mice:</strong> Excellence in digital marketing and innovation</li>
+                        </ul>
+                        <p>This recognition demonstrates the project's innovation in combining technology with artistic performance to create meaningful audience experiences.</p>
                     </div>
                 </div>
             </div>
