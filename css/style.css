@@ -430,7 +430,7 @@ body {
 
 .portfolio-card:hover .card-preview img {
     transform: scale(1.05);
-    opacity: 0.7;
+    filter: grayscale(100%);
 }
 
 /* Expanded Project Details */
@@ -653,18 +653,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(255, 196, 81, 0.95), rgba(255, 196, 81, 0.85));
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.25s ease;
-    color: #fff;
+    color: var(--accent-testimonials);
     text-align: center;
     padding: 2rem;
-    backdrop-filter: blur(3px) brightness(1.1) contrast(1.1);
-    -webkit-backdrop-filter: blur(3px) brightness(1.1) contrast(1.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 10;
     pointer-events: none;
 }
@@ -680,6 +680,16 @@ body {
     margin-bottom: 1rem;
     font-weight: 500;
     opacity: 0.9;
+}
+
+/* Ensure client card overlays use yellow text to match section accent */
+.portfolio-card.client .card-overlay {
+    color: var(--accent-testimonials);
+}
+
+/* Ensure game card overlays also use yellow text to match client section */
+.portfolio-card.game .card-overlay {
+    color: var(--accent-testimonials);
 }
 
 /* Project Details Content */
@@ -699,21 +709,7 @@ body {
 }
 
 .detail-section h4 {
-    color: var(--accent-portfolio);
     margin-bottom: 1rem;
-}
-
-/* Specific colors for different section headers */
-.detail-section h4.turquoise-header {
-    color: var(--accent-resume); /* turquoise */
-}
-
-.detail-section h4.pink-header {
-    color: var(--accent-portfolio); /* pink */
-}
-
-.detail-section h4.yellow-header {
-    color: var(--accent-testimonials); /* yellow */
 }
 
 .detail-section ul {
@@ -843,34 +839,6 @@ body {
     to { opacity: 1; }
 }
 
-.portfolio-item .overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    transform: translateY(-10px);
-    transition: transform 0.4s ease;
-}
-
-.portfolio-item .overlay p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    transform: translateY(10px);
-    transition: transform 0.4s ease;
-}
-
-.portfolio-item:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.portfolio-item:hover .overlay h3,
-.portfolio-item:hover .overlay p {
-    transform: translateY(0);
-}
-
-.portfolio-item:hover .overlay {
-    opacity: 1;
-}
-
 /* Resume Timeline */
 .resume-grid {
     display: grid;
@@ -879,7 +847,7 @@ body {
 }
 
 .resume-section h3 {
-    color: var(--text-color);
+
     font-size: 1.4rem;
     margin-bottom: 2rem;
     position: relative;
@@ -1053,23 +1021,9 @@ body {
     border-top: 1px solid #e0e0e0;
 }
 
-.clients-section h3 {
-    color: var(--text-color);
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 0.75rem;
-}
 
-.clients-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent-testimonials);
-}
+
+
 
 /* Project Details Container Overrides */
 /* Project Details Container */
