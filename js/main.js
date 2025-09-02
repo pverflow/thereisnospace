@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle Functionality
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Update theme toggle icons
+    function updateThemeIcons(theme) {
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            const span = toggle.querySelector('span');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+                if (span) span.textContent = span.textContent.includes('Mode') ? 'Light Mode' : 'Light';
+            } else {
+                icon.className = 'fas fa-moon';
+                if (span) span.textContent = span.textContent.includes('Mode') ? 'Dark Mode' : 'Dark';
+            }
+        });
+    }
+    
+    // Initialize theme icons
+    updateThemeIcons(savedTheme);
+    
+    // Global theme toggle function
+    window.toggleTheme = function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcons(newTheme);
+    };
+
     // Initialize AOS
     AOS.init({
         duration: 800,

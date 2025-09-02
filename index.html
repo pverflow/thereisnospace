@@ -21,9 +21,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-toggle">
-        <i class="fas fa-bars"></i>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-left">
+            <div class="mobile-logo">
+                <img src="images/logos/logo.svg" alt="Logo">
+            </div>
+        </div>
+        <div class="mobile-header-right">
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+                <span>Dark</span>
+            </button>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Desktop Theme Toggle -->
+    <button class="theme-toggle theme-toggle-desktop" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
     </button>
 
     <!-- Main Content -->
