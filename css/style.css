@@ -1317,7 +1317,6 @@ body {
     .mobile-header .theme-toggle span {
         display: none;
     }
-    }
     
     /* Improve mobile typography */
     .section h2 {
@@ -1407,6 +1406,8 @@ body {
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;
+    }
+    
     /* Portfolio items responsiveness */
     .portfolio-item {
         width: 100%;
