@@ -1244,111 +1244,70 @@ body {
     font-size: 1.8rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    :root {
-        --sidebar-width: 300px;
-    }
-}
-
-/* Early mobile detection for larger screens that might be mobile */
-@media (max-width: 1024px) and (pointer: coarse) {
-    /* Force mobile mode for touch devices even at larger sizes */
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* Mobile header visibility */
     .mobile-header {
-        display: flex !important;
+        display: flex;
     }
     
+    /* Hide desktop theme toggle */
     .theme-toggle-desktop {
-        display: none !important;
+        display: none;
     }
     
-    .sidebar {
-        transform: translateX(-100%);
-        visibility: hidden;
-    }
-    
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-    
+    /* Mobile layout structure */
     body {
-        padding-top: 100px !important;
+        padding-top: 100px;
+        font-size: 16px;
     }
-}
 
-@media (max-width: 920px) {
-    /* Switch to single column layout earlier to prevent overflow */
+    .main-container {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Single column layout for mobile */
     .two-column-layout {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .portfolio-column,
     .resume-column {
         grid-column: 1;
-        max-width: none !important;
-        width: 100% !important;
+        max-width: none;
+        width: 100%;
     }
     
-    /* Force mobile header for medium screens */
-    .mobile-header {
-        display: flex !important;
+    /* Content area adjustments */
+    .content-area {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
     }
     
-    .theme-toggle-desktop {
-        display: none !important;
-    }
-    
+    /* Hide sidebar on mobile */
     .sidebar {
         transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
         visibility: hidden;
     }
     
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-    
-    body {
-        padding-top: 100px !important;
-    }
-}
-
-/* Tablet/Mobile transition */
-@media (max-width: 850px) {
-    /* Show mobile header earlier for better mobile experience */
-    .mobile-header {
-        display: flex;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* Hide desktop theme toggle */
-    .theme-toggle-desktop {
-        display: none !important;
-    }
-    
-    /* Apply mobile theme toggle styling */
+    /* Mobile theme toggle styling */
     .mobile-header .theme-toggle {
         position: static;
-        top: auto;
-        right: auto;
         padding: 12px;
         font-size: 14px;
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
         border-radius: 8px;
         gap: 0;
         flex-shrink: 0;
-        min-width: 48px;
-        /* Better touch targets */
-        min-height: 48px;
-        touch-action: manipulation;
+        min-width: 44px;
+        min-height: 44px;
     }
     
     .mobile-header .theme-toggle i {
@@ -1358,86 +1317,6 @@ body {
     .mobile-header .theme-toggle span {
         display: none;
     }
-    
-    /* Force mobile layout */
-    .two-column-layout {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
-    }
-
-    .portfolio-column,
-    .resume-column {
-        grid-column: 1;
-        max-width: none !important;
-        width: 100% !important;
-    }
-    
-    /* Start reducing sidebar dependency */
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .main-container {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Hide sidebar on tablet sizes */
-    .sidebar {
-        transform: translateX(-100%);
-        width: 85%;
-        max-width: 320px;
-        box-shadow: none;
-        visibility: hidden;
-    }
-    
-    /* Add body padding for mobile header */
-    body {
-        padding-top: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ensure mobile header is visible and body has proper padding */
-    .mobile-header {
-        display: flex !important;
-    }
-    
-    /* Layout adjustments */
-    body {
-        padding-top: 100px !important;
-        font-size: 16px; /* Better mobile text size */
-    }
-
-    .main-container {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    /* Ensure single column layout */
-    .two-column-layout {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
-    }
-
-    .portfolio-column,
-    .resume-column {
-        grid-column: 1;
-        max-width: none !important;
-        width: 100% !important;
-    }
-    
-    /* Fix resume column specifically for mobile */
-    .resume-column {
-        max-width: none !important;
-        width: 100% !important;
-        align-self: stretch !important;
     }
     
     /* Improve mobile typography */
@@ -1528,6 +1407,16 @@ body {
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;
+    /* Portfolio items responsiveness */
+    .portfolio-item {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    .portfolio-item img, 
+    .portfolio-item video {
+        width: 100%;
+        height: 100%;
     }
 
     .overlay.active {
@@ -1537,12 +1426,17 @@ body {
     }
 }
 
+/* Small mobile adjustments */
 @media (max-width: 480px) {
-    /* Typography */
-    .social-icons a { font-size: 1rem; }
-    .profile-section h1 { font-size: 1.6rem; }
+    /* Typography scaling for very small screens */
+    .social-icons a { 
+        font-size: 1rem; 
+    }
     
-    /* Better mobile text sizing */
+    .profile-section h1 { 
+        font-size: 1.6rem; 
+    }
+    
     body {
         font-size: 16px;
     }
@@ -1573,151 +1467,12 @@ body {
         line-height: 1.5;
     }
     
-    /* Spacing */
-    .section { padding: 1rem; }
-    .timeline-item { padding-left: 1rem; }
-    
-    /* Force mobile layout for small screens */
-    .mobile-header {
-        display: flex !important;
+    /* Spacing adjustments */
+    .section { 
+        padding: 1rem; 
     }
     
-    body {
-        padding-top: 100px !important;
-    }
-    
-    .sidebar {
-        transform: translateX(-100%) !important;
-        visibility: hidden !important;
-    }
-    
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-    
-    .two-column-layout {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .portfolio-column,
-    .resume-column {
-        max-width: none !important;
-        width: 100% !important;
-    }
-}
-
-/* Additional mobile detection for touch devices */
-@media (hover: none) and (pointer: coarse) {
-    .mobile-header {
-        display: flex !important;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex !important;
-    }
-    
-    .theme-toggle-desktop {
-        display: none !important;
-    }
-    
-    /* Apply mobile theme toggle styling for touch devices */
-    .mobile-header .theme-toggle {
-        position: static;
-        top: auto;
-        right: auto;
-        padding: 12px;
-        font-size: 14px;
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        gap: 0;
-        flex-shrink: 0;
-        min-width: 48px;
-        min-height: 48px;
-    }
-    
-    .mobile-header .theme-toggle i {
-        font-size: 18px;
-    }
-    
-    .mobile-header .theme-toggle span {
-        display: none;
-    }
-    
-    .sidebar {
-        transform: translateX(-100%);
-        visibility: hidden;
-    }
-    
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-    
-    body {
-        padding-top: 100px !important;
-    }
-    
-    .two-column-layout {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .portfolio-column,
-    .resume-column {
-        max-width: none !important;
-        width: 100% !important;
-    }
-}
-
-/* Force mobile mode for any screen under 600px regardless of device type */
-@media (max-width: 600px) {
-    .mobile-header {
-        display: flex !important;
-    }
-    
-    .theme-toggle-desktop {
-        display: none !important;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex !important;
-        width: 48px !important;
-        height: 48px !important;
-        min-width: 48px !important;
-        min-height: 48px !important;
-    }
-    
-    .mobile-header .theme-toggle {
-        width: 48px !important;
-        height: 48px !important;
-        min-width: 48px !important;
-        min-height: 48px !important;
-        padding: 12px !important;
-    }
-    
-    .sidebar {
-        transform: translateX(-100%) !important;
-        visibility: hidden !important;
-    }
-    
-    .content-area {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
-    
-    .two-column-layout {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .portfolio-column,
-    .resume-column {
-        max-width: none !important;
-        width: 100% !important;
-    }
-    
-    body {
-        padding-top: 100px !important;
-        font-size: 18px !important; /* Larger base font for mobile */
+    .timeline-item { 
+        padding-left: 1rem; 
     }
 }
