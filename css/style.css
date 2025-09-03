@@ -231,7 +231,7 @@ body {
 .portfolio-column {
     grid-column: 1;
     min-height: 0;
-    min-width: 320px; /* Prevent getting smaller than portfolio cards (300px + margins) */
+    min-width: 360px; /* 300px card + 48px section padding + 12px buffer */
 }
 
 .resume-column {
