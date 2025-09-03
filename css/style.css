@@ -1249,7 +1249,7 @@ body {
 }
 
 /* Mobile Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     /* Mobile header visibility */
     .mobile-header {
         display: flex;
