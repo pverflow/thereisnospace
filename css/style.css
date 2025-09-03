@@ -1283,6 +1283,7 @@ body {
         grid-column: 1;
         max-width: none;
         width: 100%;
+        min-width: 0; /* Add this to reset the desktop min-width */
     }
     
     /* Content area adjustments */
