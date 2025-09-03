@@ -237,7 +237,7 @@ body {
 .resume-column {
     grid-column: 2;
     min-height: 0;
-    min-width: 0; /* Prevent overflow */
+    min-width: 300px; /* Prevent getting narrower than 300px (max 50px reduction from 350px) */
     position: relative;
     height: fit-content;
     max-width: 350px;
