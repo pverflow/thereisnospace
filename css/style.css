@@ -231,7 +231,7 @@ body {
 .portfolio-column {
     grid-column: 1;
     min-height: 0;
-    min-width: 0; /* Prevent overflow */
+    min-width: 320px; /* Prevent getting smaller than portfolio cards (300px + margins) */
 }
 
 .resume-column {
