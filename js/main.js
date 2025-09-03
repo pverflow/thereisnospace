@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Detection and Force Mobile Mode
+    function detectMobile() {
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const isSmallScreen = window.innerWidth <= 1024;
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        if (isMobile || (isSmallScreen && isTouchDevice)) {
+            document.body.classList.add('force-mobile');
+            // Add CSS to force mobile mode
+            const style = document.createElement('style');
+            style.textContent = `
+                .force-mobile .mobile-header { display: flex !important; }
+                .force-mobile .theme-toggle-desktop { display: none !important; }
+                .force-mobile .sidebar { transform: translateX(-100%) !important; visibility: hidden !important; }
+                .force-mobile .content-area { margin-left: 0 !important; width: 100% !important; }
+                .force-mobile .two-column-layout { grid-template-columns: 1fr !important; }
+                .force-mobile .portfolio-column, .force-mobile .resume-column { max-width: none !important; width: 100% !important; }
+                .force-mobile { padding-top: 100px !important; font-size: 18px !important; }
+                .force-mobile .mobile-menu-toggle { display: flex !important; width: 48px !important; height: 48px !important; }
+                .force-mobile .mobile-header .theme-toggle { width: 48px !important; height: 48px !important; padding: 12px !important; }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+    
+    // Run mobile detection
+    detectMobile();
+    
+    // Re-run on window resize
+    window.addEventListener('resize', detectMobile);
+
     // Theme Toggle Functionality
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
