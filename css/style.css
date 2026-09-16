@@ -1120,6 +1120,21 @@ body {
     font-weight: 500;
 }
 
+/* Companies that still have a website link out; the defunct ones stay plain text */
+.details .company a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 3px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.details .company a:hover,
+.details .company a:focus-visible {
+    color: var(--accent-resume);
+    text-decoration-color: var(--accent-resume);
+}
+
 .details .description {
     color: var(--text-secondary);
     font-size: 0.9rem;
