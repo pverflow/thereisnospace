@@ -867,16 +867,16 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Specific colors for different section headers */
-.detail-section h4.turquoise-header {
+/* Three columns, three colours - driven by column position, not heading text */
+.detail-section:nth-child(3n + 1) h4 {
     color: var(--accent-resume); /* turquoise */
 }
 
-.detail-section h4.pink-header {
+.detail-section:nth-child(3n + 2) h4 {
     color: var(--accent-portfolio); /* pink */
 }
 
-.detail-section h4.yellow-header {
+.detail-section:nth-child(3n + 3) h4 {
     color: var(--accent-testimonials); /* yellow */
 }
 

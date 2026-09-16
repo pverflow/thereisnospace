@@ -123,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.project-details').forEach(details => {
             details.classList.remove('active');
         });
+        // Kill any playing embed, otherwise audio keeps running behind the closed modal
+        document.querySelectorAll('.gallery-main iframe').forEach(frame => frame.remove());
         projectDetailsContainer.classList.remove('active');
         document.body.style.overflow = '';
     }
@@ -138,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
             projectDetailsContainer.classList.add('active');
             projectDetails.classList.add('active');
             document.body.style.overflow = 'hidden';
+
+            // Start on the video if this project has one - reuses the thumb click handler
+            projectDetails.querySelector('.gallery-thumbs .video-thumb')?.click();
         }
 
         if (expandButton) {
@@ -397,37 +402,5 @@ function showComancheTrailerVideo(galleryMainId) {
     galleryMain.parentElement.querySelector('.video-thumb').classList.add('active');
 }
 
-// Function to color detail section headers based on their text content
-function colorDetailHeaders() {
-    const headers = document.querySelectorAll('.detail-section h4');
-    
-    headers.forEach(header => {
-        const text = header.textContent.trim();
-        
-        // Turquoise for Pipeline Development, Technical Implementation, and Hands-On Development
-        if (text.includes('Pipeline Development') || text.includes('Technical Implementation') || text.includes('Pipeline Innovation') || text.includes('Hands-On Development')) {
-            header.classList.add('turquoise-header');
-        }
-        // Yellow for Technical Innovation, Project Deliverables, and Project Impact
-        else if (text.includes('Technical Innovation') || text.includes('Project Deliverables') || text.includes('Project Impact')) {
-            header.classList.add('yellow-header');
-        }
-        // Pink for Team Leadership, Creative Responsibilities, and Art Direction (default, but explicit)
-        else if (text.includes('Team Leadership') || text.includes('Creative Responsibilities') || text.includes('Art Direction') || text.includes('Team Leadership & Production')) {
-            header.classList.add('pink-header');
-        }
-    });
-}
+// Detail-section header colors come from CSS (.detail-section:nth-child rules).
 
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    colorDetailHeaders();
-});
-
-// Also call it when project details are opened (in case content is dynamically loaded)
-document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-project]')) {
-        // Small delay to ensure content is loaded
-        setTimeout(colorDetailHeaders, 100);
-    }
-});
